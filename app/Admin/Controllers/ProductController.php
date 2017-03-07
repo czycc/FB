@@ -96,7 +96,7 @@ class ProductController extends Controller
         return Admin::form(Product::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', '商品标题')->rules('required|max:255|unique:products');
+            $form->text('title', '商品标题')->rules('required|max:255');
             $form->number('number', '库存数量')->rules('required');
             $form->number('price', '价格')->rules('required');
             $form->image('img', '商品图片')->multiple()->uniqueName()

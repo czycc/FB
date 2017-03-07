@@ -98,7 +98,7 @@ class ActivityController extends Controller
         return Admin::form(Activity::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', '拼团标题')->rules('required|unique:activities');
+            $form->text('title', '拼团标题')->rules('required');
             $form->currency('pt_price', '拼团价格')->symbol('¥')->rules('required');
             $form->number('pt_number', '拼团人数')->rules('required');
             $form->date('over_time', '结束时间')->rules('required');

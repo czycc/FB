@@ -84,7 +84,7 @@ class CategoryController extends Controller
         return Admin::form(Category::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('title', '分类名称')->rules('required|max:255|unique:categories');
+            $form->text('title', '分类名称')->rules('required|max:255');
             $form->select('parent_id', '父级分类')->options(Category::selectOptions());
             $states =[
                 'on' => ['value' => '1', 'text' => '打开', 'color' => 'primary'],

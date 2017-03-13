@@ -20,3 +20,4 @@ Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
         dd($user);
     });
 });
+Route::get('/img', 'ImgController@show');

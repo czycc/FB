@@ -12,5 +12,6 @@ Route::group([
     $router->resource('categories', CategoryController::class);
     $router->resource('products', ProductController::class);
     $router->resource('activities', ActivityController::class);
-
+    //图片后台操作
+    $router->resource('imgs', ImgController::class);
 });
